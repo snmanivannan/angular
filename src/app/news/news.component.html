@@ -1,0 +1,69 @@
+<p>news works!</p>
+
+<form [formGroup]="this.newsService.form" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <mat-form-field class="col">
+      <input
+        matInput
+        placeholder="Title of the News"
+        formControlName="text"
+        type="text"
+        required
+        autofocus
+      />
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field class="col">
+      <input
+        matInput
+        placeholder="Source of the News"
+        formControlName="link"
+        type="text"
+        required
+      />
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field class="col">
+      <input
+        matInput
+        placeholder="Description of the News"
+        formControlName="desc"
+        type="text"
+        required
+      />
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field class="col">
+      <input
+        matInput
+        placeholder="No. of Likes"
+        formControlName="likes"
+        type="text"
+        required
+      />
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field class="col">
+      <input
+        matInput
+        placeholder="No. of Views"
+        formControlName="views"
+        type="text"
+        required
+      />
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <div class="col-12 d-flex justify-content-between">
+      <button type="submit  " mat-raised-button color="primary">
+        Save
+      </button>
+    </div>
+  </div>
+</form>
